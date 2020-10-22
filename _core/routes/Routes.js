@@ -15,10 +15,6 @@ export default function Routes() {
       {
           name: "Login",
           component: Login
-      },
-      {
-          name: "NumbersGame",
-          component: NumbersGame
       }
   ];
 
