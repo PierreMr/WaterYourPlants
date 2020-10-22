@@ -2,14 +2,11 @@ import React from "react";
 import { StyleSheet, View, Button } from "react-native";
 
 export default function Home({ navigation }) {
-  console.log(navigation)
-  const navNambersGame = () => {
-    navigation.navigate('NumbersGame')
-  }
+  const navLogin = () => { navigation.navigate('Login'); }
 
   return (
     <View style={styles.container}>
-      <Button title="Nouvelle partie" onPress={() => navNambersGame()}></Button>
+      <Button title="Login" onPress={() => navLogin()}></Button>
     </View>
   );
 }
