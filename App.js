@@ -13,6 +13,8 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import rootReducer from "./_core/reducers";
 
+import UseUser from "./_core/auth/hooks/UseUser";
+
 const store = createStore(
   rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -20,30 +22,9 @@ const store = createStore(
 
 export default function App() {
   // Set an initializing state whilst Firebase connects
-  const [initializing, setInitializing] = useState(true);
-  const [user, setUser] = useState();
-
-  // Handle user state changes
-  function onAuthStateChanged(user) {
-    setUser(user);
-    console.log(user);
-    if (initializing) setInitializing(false);
-  }
-
-  useEffect(() => {
-    const subscriber = firebase.auth().onAuthStateChanged(onAuthStateChanged);
-    return subscriber; // unsubscribe on unmount
-  }, []);
+  const [user, initializing] = UseUser();
 
   if (initializing) return null;
-
-  if (!user) {
-    return (
-      <View>
-        <Text>Login</Text>
-      </View>
-    );
-  }
 
   return (
     <Provider store={store}>

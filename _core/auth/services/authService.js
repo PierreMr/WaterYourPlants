@@ -5,7 +5,7 @@ const emitter = new EventEmitter();
 export const addUserListener = (listener) => emitter.addListener(listener);
 
 const AuthService = {
-    getUser: firebase.auth().currentUser,
+    getUser: () => firebase.auth().currentUser,
 }
 
 export default AuthService;
