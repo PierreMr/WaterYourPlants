@@ -17,7 +17,7 @@
 
 - Go to [Firebase console](https://console.firebase.google.com/)
 - Create a new project
-- Create `environments.js` in `./environments` such as :
+- Create `environments.js` in `./environments` such as
 
 ```js
 export default firebaseConf = {
