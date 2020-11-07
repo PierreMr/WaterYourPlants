@@ -1,4 +1,4 @@
-# React Native Google Auth
+# React Native Auth Kit
 
 ## Installation
 
