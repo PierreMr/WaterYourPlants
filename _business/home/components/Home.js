@@ -1,13 +1,13 @@
 import React from "react";
 import { StyleSheet, View, Text, Button } from "react-native";
-import * as firebase from "firebase/app";
+import AuthService from "./../../../_core/auth/services/AuthService";
 
 export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <Text>Welcome !</Text>
-      <Text>{ firebase.auth().currentUser.displayName }</Text>
-      <Button title="Déconnexion" onPress={() => firebase.auth().signOut()}></Button>
+      <Text>{ AuthService.user().displayName }</Text>
+      <Button title="Déconnexion" onPress={() => AuthService.logout()}></Button>
     </View>
   );
 }

@@ -22,7 +22,7 @@ export default function Navigation() {
 
     return (
         <Stack.Navigator>
-            {AuthService.getUser() ? 
+            {AuthService.user() ? 
                 <>{ privateRoutes.map(privateRoute => <Stack.Screen key={privateRoute.name} name={privateRoute.name} component={privateRoute.component} />) }</>
                 : <Stack.Screen name={'Login'} component={Login} />
             }
