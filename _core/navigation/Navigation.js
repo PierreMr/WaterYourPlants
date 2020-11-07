@@ -22,8 +22,10 @@ export default function Navigation() {
 
     return (
         <Stack.Navigator>
-            {AuthService.getUser() ?? privateRoutes.map(privateRoute => <Stack.Screen key={privateRoute.name} name={privateRoute.name} component={privateRoute.component} />)}
-            <Stack.Screen key={'Login'} name={'Login'} component={Login} />
+            {AuthService.getUser() ? 
+                <>{ privateRoutes.map(privateRoute => <Stack.Screen key={privateRoute.name} name={privateRoute.name} component={privateRoute.component} />) }</>
+                : <Stack.Screen name={'Login'} component={Login} />
+            }
             {routes.map(route => <Stack.Screen key={route.name} name={route.name} component={route.component} />)}
         </Stack.Navigator>
     );
