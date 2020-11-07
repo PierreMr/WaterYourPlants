@@ -11,7 +11,7 @@
 Create `environments.js` in `./environments` such as :
  
 ```js
-export default firabseConf = {
+export default firebaseConf = {
     apiKey: "API_KEY",
     authDomain: "PROJECT_ID.firebaseapp.com",
     databaseURL: "https://PROJECT_ID.firebaseio.com",
