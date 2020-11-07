@@ -1,5 +1,12 @@
 # React Native Auth Kit
 
+- [React Native Auth Kit](#react-native-auth-kit)
+  - [Installation](#installation)
+    - [React](#react)
+    - [Firebase](#firebase)
+      - [Google Auth](#google-auth)
+      - [Facebook Auth](#facebook-auth)
+
 ## Installation
 
 ### React
@@ -9,10 +16,7 @@
 ### Firebase
 
 - Go to [Firebase console](https://console.firebase.google.com/)
-- Create new project
-- Go to `Authentication` > `Sign-in method`
-- Activate `Email/Password` & `Google`
-
+- Create a new project
 - Create `environments.js` in `./environments` such as :
  
 ```js
@@ -25,3 +29,20 @@ export default firebaseConf = {
 ```
 
 - Put in your own infos you'll find in the [Firebase console](https://console.firebase.google.com/) > `Your Project` > `Project Overview` > `Project settings`
+
+#### Google Auth
+
+- In the [Firebase console](https://console.firebase.google.com/) > `Your Project` > `Authentication` > `Sign-in method`
+- Activate `Google`
+
+#### Facebook Auth
+
+- Go to [Facebook for Developers](https://developers.facebook.com/)
+- Create a new app
+- Go to `Settings` > `Basic`
+- Get the `App ID` & `App Secret`
+
+- In the [Firebase console](https://console.firebase.google.com/) > `Your Project` > `Authentication` > `Sign-in method`
+- Activate `Facebook`
+- Put in your `App ID` & `App Secret`
+- Paste the `OAuth redirect URI (e.g. my-app-12345.firebaseapp.com/__/auth/handler)` in the [Facebook for Developers](https://developers.facebook.com/) > `Facebook Login` > `Settings` > `Valid OAuth redirect URIs` section
