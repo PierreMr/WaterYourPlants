@@ -8,7 +8,12 @@
 
 ### Firebase
 
-Create `environments.js` in `./environments` such as :
+- Go to [Firebase console](https://console.firebase.google.com/)
+- Create new project
+- Go to `Authentication` > `Sign-in method`
+- Activate `Email/Password` & `Google`
+
+- Create `environments.js` in `./environments` such as :
  
 ```js
 export default firebaseConf = {
@@ -19,4 +24,4 @@ export default firebaseConf = {
     storageBucket: "PROJECT_ID.appspot.com",
 ```
 
-Put in your own infos.
+- Put in your own infos you'll find in the [Firebase console](https://console.firebase.google.com/) > `Your Project` > `Project Overview` > `Project settings`
