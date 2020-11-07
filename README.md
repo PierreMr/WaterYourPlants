@@ -18,7 +18,7 @@
 - Go to [Firebase console](https://console.firebase.google.com/)
 - Create a new project
 - Create `environments.js` in `./environments` such as :
- 
+- 
 ```js
 export default firebaseConf = {
     apiKey: "API_KEY",
@@ -41,8 +41,7 @@ export default firebaseConf = {
 - Create a new app
 - Go to `Settings` > `Basic`
 - Get the `App ID` & `App Secret`
-
 - In the [Firebase console](https://console.firebase.google.com/) > `Your Project` > `Authentication` > `Sign-in method`
 - Activate `Facebook`
 - Put in your `App ID` & `App Secret`
-- Paste the `OAuth redirect URI (e.g. my-app-12345.firebaseapp.com/__/auth/handler)` in the [Facebook for Developers](https://developers.facebook.com/) > `Facebook Login` > `Settings` > `Valid OAuth redirect URIs` section
+- Paste the `OAuth redirect URI (e.g. my-app-12345.firebaseapp.com/__/auth/handler)` in the [Facebook for Developers](https://developers.facebook.com/) > `Your App` > `Facebook Login` > `Settings` > `Valid OAuth redirect URIs` section
