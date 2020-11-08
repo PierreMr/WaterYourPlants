@@ -11,6 +11,21 @@ const UseUser = () => {
     function onAuthStateChanged(user) {
       setUser(user);
       if (initializing) setInitializing(false);
+
+      if (user) {
+        const docUser = firebase.firestore().collection("users").doc(user.uid);
+        
+        docUser.get()
+        .then(doc => {
+          if (!doc.exists) {
+            docUser.set({
+              uid: user.uid,
+              name: user.displayName,
+              createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            })
+          }
+        })
+      }
     }
 
     useEffect(() => {

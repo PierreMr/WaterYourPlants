@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ReactNativeGoogleAuth",
-    "slug": "ReactNativeGoogleAuth",
+    "name": "WaterYourPlants",
+    "slug": "WaterYourPlants",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
