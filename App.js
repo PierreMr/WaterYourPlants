@@ -7,6 +7,7 @@ import Navigation from "./_core/navigation/Navigation";
 import firebaseConf from "./environments/environments";
 import * as firebase from "firebase/app";
 firebase.initializeApp(firebaseConf);
+firebase.auth().languageCode = 'fr';
 
 // Redux
 import { Provider } from "react-redux";

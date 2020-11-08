@@ -4,6 +4,7 @@
   - [Installation](#installation)
     - [React](#react)
     - [Firebase](#firebase)
+      - [Email Auth](#email-auth)
       - [Google Auth](#google-auth)
       - [Facebook Auth](#facebook-auth)
 
@@ -29,6 +30,11 @@ export default firebaseConf = {
 ```
 
 - Put in your own infos you'll find in the [Firebase console](https://console.firebase.google.com/) > `Your Project` > `Project Overview` > `Project settings`
+
+#### Email Auth
+
+- In the [Firebase console](https://console.firebase.google.com/) > `Your Project` > `Authentication` > `Sign-in method`
+- Activate `Email/Password`
 
 #### Google Auth
 
