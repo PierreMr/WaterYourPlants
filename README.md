@@ -1,6 +1,6 @@
-# React Native Auth Kit
+# WaterYourPlants
 
-- [React Native Auth Kit](#react-native-auth-kit)
+- [WaterYourPlants](#wateryourplants)
   - [Installation](#installation)
     - [React](#react)
     - [Firebase](#firebase)
@@ -27,6 +27,7 @@ export default firebaseConf = {
     databaseURL: "https://PROJECT_ID.firebaseio.com",
     projectId: "PROJECT_ID",
     storageBucket: "PROJECT_ID.appspot.com",
+}
 ```
 
 - Put in your own infos you'll find in the [Firebase console](https://console.firebase.google.com/) > `Your Project` > `Project Overview` > `Project settings`

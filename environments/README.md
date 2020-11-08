@@ -9,6 +9,7 @@ export default firebaseConf = {
     databaseURL: "https://PROJECT_ID.firebaseio.com",
     projectId: "PROJECT_ID",
     storageBucket: "PROJECT_ID.appspot.com",
+}
 ```
 
 Put in your own infos.
