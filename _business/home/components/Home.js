@@ -2,11 +2,12 @@ import React from "react";
 import { StyleSheet, View, Text, Button } from "react-native";
 import AuthService from "./../../../_core/auth/services/AuthService";
 
-export default function Home({ navigation }) {
+const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text>Welcome !</Text>
       <Text>{ AuthService.user().displayName }</Text>
+      <Button title="Habitats" onPress={() => navigation.navigate("Habitats") }></Button>
       <Button title="Déconnexion" onPress={() => AuthService.logout()}></Button>
     </View>
   );
@@ -20,3 +21,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+
+export default Home;

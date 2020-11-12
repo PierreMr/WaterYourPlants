@@ -2,8 +2,9 @@ import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
 import AuthService from "./../auth/services/AuthService";
 
-import Home from "../../_business/home/components/Home";
-import Login from "../auth/components/Login";
+import Home from "./../../_business/home/components/Home";
+import Login from "./../auth/components/Login";
+import HabitatsList from "./../../_business/habitat/components/Habitats/HabitatsList";
 
 const Stack = createStackNavigator();
 
@@ -13,6 +14,10 @@ export default function Navigation() {
         {
             name: "Home",
             component: Home
+        },
+        {
+            name: "Habitats",
+            component: HabitatsList
         },
     ];
 

@@ -7,7 +7,7 @@ export default class EventEmitter {
     };
     trigger = (message) => {
         for (const k in this.listeners) {
-        this.listeners[k](message);
+            this.listeners[k](message);
         }
     };
 }
